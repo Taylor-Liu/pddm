@@ -461,6 +461,14 @@ def run_job(args, save_dir=None):
 def main():
 
     #####################
+    # dynamic application for video memory -- by liutl
+    #####################
+
+    config = tf.ConfigProto()  
+    config.gpu_options.allow_growth = True  
+    session = tf.Session(config=config)
+
+    #####################
     # training args
     #####################
 
